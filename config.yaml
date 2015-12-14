@@ -1,3 +1,4 @@
+options:
   os-admin-network:
     type: string
     default:
@@ -34,3 +35,8 @@
       will create the following endpoint for neutron-api:
       .
       https://neutron-api.example.com:9696/
+  region:
+    default: RegionOne
+    type: string
+    description: OpenStack Region
+
