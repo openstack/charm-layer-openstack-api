@@ -39,4 +39,3 @@ options:
     default: RegionOne
     type: string
     description: OpenStack Region
-
