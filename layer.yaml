@@ -1,1 +1,1 @@
-includes: ['layer:openstack', 'interface:mysql-shared', 'interface:rabbitmq', 'interface:keystone']
+includes: ['layer:openstack-principle', 'interface:mysql-shared', 'interface:rabbitmq', 'interface:keystone']
