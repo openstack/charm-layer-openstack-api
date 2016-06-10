@@ -39,3 +39,27 @@ options:
     default: RegionOne
     type: string
     description: OpenStack Region
+  haproxy-server-timeout:
+    type: int
+    default: 30000
+    description: |
+       Server timeout configuration in ms for haproxy, used in HA
+       configurations.
+  haproxy-client-timeout:
+    type: int
+    default: 30000
+    description: |
+       Client timeout configuration in ms for haproxy, used in HA
+       configurations.
+  haproxy-queue-timeout:
+    type: int
+    default: 5000
+    description: |
+       Queue timeout configuration in ms for haproxy, used in HA
+       configurations.
+  haproxy-connect-timeout:
+    type: int
+    default: 5000
+    description: |
+       Connect timeout configuration in ms for haproxy, used in HA
+       configurations.
