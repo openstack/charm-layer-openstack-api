@@ -5,6 +5,10 @@ description: Layer for all OpenStack charms providing API services
 categories:
   - openstack
 subordinate: false
+extra-bindings:
+  public:
+  admin:
+  internal:
 requires:
   shared-db:
     interface: mysql-shared
