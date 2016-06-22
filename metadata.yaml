@@ -2,7 +2,7 @@ name: openstack-api
 summary: Reative Layer - OpenStack API charms
 maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
 description: Layer for all OpenStack charms providing API services
-categories:
+tags:
   - openstack
 subordinate: false
 extra-bindings:
