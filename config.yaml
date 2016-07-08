@@ -83,3 +83,22 @@ options:
     description: |
       Default CIDR netmask to use for HA vip when it cannot be automatically
       determined.
+  ssl_cert:
+    type: string
+    default:
+    description: |
+      SSL certificate to install and use for API ports.  Setting this value
+      and ssl_key will enable reverse proxying, point Glance's entry in the
+      Keystone catalog to use https, and override any certficiate and key
+      issued by Keystone (if it is configured to do so).
+  ssl_key:
+    type: string
+    default:
+    description: |
+      SSL key to use with certificate specified as ssl_cert.
+  ssl_ca:
+    type: string
+    default:
+    description: |
+      SSL CA to use with the certificate and key provided - this is only
+      required if you are providing a privately signed ssl_cert and ssl_key.
