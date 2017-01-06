@@ -10,7 +10,7 @@ API services, and provides all of the core functionality for:
 
 To use this layer, including the following in the layer.yaml of your charm:
 
-    include: ['layer:openstack-principle']
+    include: ['layer:openstack-api']
 
 And then read the [new API charm](https://github.com/openstack/charm-guide/blob/master/doc/source/new-charm.rst)
 guide for details on how to use this layer in-conjuction with the
