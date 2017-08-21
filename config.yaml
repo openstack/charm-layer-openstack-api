@@ -27,14 +27,38 @@ options:
     type: string
     default:
     description: |
-      The hostname or address of the public endpoints created for neutron-api
-      in the keystone identity provider.
+      The hostname or address of the public endpoints created in the keystone
+      identity provider.
       .
       This value will be used for public endpoints. For example, an
-      os-public-hostname set to 'neutron-api.example.com' with ssl enabled
+      os-public-hostname set to 'api-public.example.com' with ssl enabled
       will create the following endpoint for neutron-api:
       .
-      https://neutron-api.example.com:9696/
+      https://api-public.example.com:9696/
+  os-internal-hostname:
+    type: string
+    default:
+    description: |
+      The hostname or address of the internal endpoints created in the keystone
+      identity provider.
+      .
+      This value will be used for internal endpoints. For example, an
+      os-internal-hostname set to 'api-internal.example.com' with ssl enabled
+      will create the following endpoint for neutron-api:
+      .
+      https://api-internal.example.com:9696/
+  os-admin-hostname:
+    type: string
+    default:
+    description: |
+      The hostname or address of the admin endpoints created in the keystone
+      identity provider.
+      .
+      This value will be used for admin endpoints. For example, an
+      os-admin-hostname set to 'api-admin.example.com' with ssl enabled
+      will create the following endpoint for neutron-api:
+      .
+      https://api-admin.example.com:9696/
   region:
     default: RegionOne
     type: string
