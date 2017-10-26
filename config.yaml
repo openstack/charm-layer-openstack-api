@@ -96,6 +96,12 @@ options:
     description: |
        Connect timeout configuration in ms for haproxy, used in HA
        configurations.
+  dns-ha:
+    type: boolean
+    default: False
+    description: |
+      Use DNS HA with MAAS 2.0. Note if this is set do not set vip settings
+      below.
   vip:
     type: string
     default:
