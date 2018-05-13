@@ -62,3 +62,25 @@ def default_setup_endpoint_available(keystone):
     with charm.provide_charm_instance() as instance:
         instance.configure_ssl(keystone)
         instance.assess_status()
+
+
+@reactive.when('certificates.available')
+def default_setup_certificates(tls):
+    """When the identity-service interface is available, this default
+    handler switches on the SSL support.
+    """
+    with charm.provide_charm_instance() as instance:
+        for cn, req in instance.get_certificate_requests().items():
+            tls.add_request_server_cert(cn, req['sans'])
+        tls.request_server_certs()
+        instance.assess_status()
+
+
+@reactive.when('certificates.batch.cert.available')
+def default_setup_endpoint_available(tls):
+    """When the identity-service interface is available, this default
+    handler switches on the SSL support.
+    """
+    with charm.provide_charm_instance() as instance:
+        instance.configure_ssl(tls)
+        instance.assess_status()
