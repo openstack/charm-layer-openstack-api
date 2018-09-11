@@ -1,0 +1,3 @@
+- project:
+    templates:
+      - python-charm-layer-jobs
