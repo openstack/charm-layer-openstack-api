@@ -1,5 +1,4 @@
 # Requirements to build the layer
 charm-tools
-ruamel.yaml==0.10.12
 simplejson
 flake8

@@ -4,7 +4,6 @@ This layer provides the base layer for OpenStack charms that are will deploy
 API services, and provides all of the core functionality for:
 
  - HA (using the hacluster charm)
- - SSL (using configuration options or keystone for certificates)
  - Juju 2.0 network space support for API endpoints
  - Configuration based network binding of API endpoints
 

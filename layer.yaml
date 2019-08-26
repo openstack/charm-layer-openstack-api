@@ -1,5 +1,4 @@
 includes: ['layer:openstack-principle', 'interface:mysql-shared',
            'interface:rabbitmq', 'interface:keystone',
-           'interface:hacluster', 'interface:openstack-ha',
-           'interface:tls-certificates', 'layer:tls-client']
+           'interface:hacluster', 'interface:openstack-ha']
 repo: 'https://github.com/openstack/charm-layer-openstack-api'
