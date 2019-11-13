@@ -1,4 +1,6 @@
 includes: ['layer:openstack-principle', 'interface:mysql-shared',
            'interface:rabbitmq', 'interface:keystone',
            'interface:hacluster', 'interface:openstack-ha']
+exclude: ['.gitignore', '.gitreview', '.zuul.yaml', 'README.md',
+          'requirements.txt', 'test-requirements.txt']
 repo: 'https://github.com/openstack/charm-layer-openstack-api'
