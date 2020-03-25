@@ -49,3 +49,16 @@ def default_setup_endpoint_connection(keystone):
                                     instance.internal_url,
                                     instance.admin_url)
         instance.assess_status()
+
+
+@reactive.when('cluster.available')
+def default_update_peers(cluster):
+    """Inform peers about this unit's API addresses.
+
+    Set public-address, internal-address and admin-address on the
+    (openstack-ha) peer relation.
+    """
+    with charm.provide_charm_instance() as instance:
+        # This function ONLY updates the peers if the data has changed.  Thus
+        # it's okay to call it on every hook invocation.
+        instance.update_peers(cluster)
